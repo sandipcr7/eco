@@ -17,6 +17,8 @@ function Header() {
         <Nav className="me-auto navbar_wrapper">
           {localStorage.getItem("user-info") ? (
             <>
+              <Link to="/">Product List</Link>
+
               <Link to="/add">Add Products</Link>
               <Link to="/update">Update Products</Link>
             </>

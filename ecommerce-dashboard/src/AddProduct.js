@@ -21,6 +21,7 @@ function AddProduct() {
     });
     alert("Data has been saved!!");
     window.location.reload(true);
+    console.log(result);
   }
   return (
     <>
