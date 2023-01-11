@@ -12,7 +12,7 @@ class ProductController extends Controller
         $product->name = $req->input('name');
         $product->price = $req->input('price');
         $product->description = $req->input('description');
-        $product->file_path = $req->file('file')->store('product');
+        $product->file_path = $req->file('file')->store('products');
 
         $product->save();
         return $product;
@@ -30,5 +30,9 @@ class ProductController extends Controller
       else{
         return["result"=>"Operation failed!!"];
       }
+    }
+    function getProduct($id){
+      return Product::find($id);
+
     }
 }

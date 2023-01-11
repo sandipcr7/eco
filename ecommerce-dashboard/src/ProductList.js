@@ -2,6 +2,7 @@ import Header from "./Header";
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
 function ProductList() {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -47,6 +48,7 @@ function ProductList() {
                 <img
                   style={{ width: 100 }}
                   src={"http://localhost:8000/" + item.file_path}
+                  alt="not found"
                 />
               </td>
               <td>
@@ -56,6 +58,11 @@ function ProductList() {
                 >
                   Delete
                 </span>
+              </td>
+              <td>
+                <Link to={"update/" + item.id}>
+                  <span className="update">Update</span>
+                </Link>
               </td>
             </tr>
           ))}
