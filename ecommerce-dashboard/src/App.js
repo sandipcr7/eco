@@ -7,6 +7,7 @@ import AddProduct from "./AddProduct";
 import Register from "./Register";
 import UpdateProduct from "./UpdateProduct";
 import ProductList from "./ProductList";
+import Search from "./SearchProduct";
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route path="/update/:id">
             <Protected Cmp={UpdateProduct} />
+          </Route>
+          <Route path="/search">
+            <Protected Cmp={Search} />
           </Route>
           <Route path="/register">
             <Register />

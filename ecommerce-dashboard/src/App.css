@@ -10,6 +10,9 @@ tr td .delete {
   cursor: pointer;
 }
 
+tr a {
+  text-decoration: none;
+}
 tr td .update {
   background-color: green;
   color: #fff;
